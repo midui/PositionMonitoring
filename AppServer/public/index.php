@@ -13,5 +13,9 @@
 
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
+//模块绑定
+define('BIND_MODULE','index');
+//自定义类库
+//define('EXTEND_PATH','../vendor/');
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
