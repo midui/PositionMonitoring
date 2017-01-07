@@ -1,39 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="../css/mui.min.css" rel="stylesheet" />
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style type="text/css">
+			#map{
+				position: fixed;
+				left: 0;
+				width: 100%;
+				top: 45px;
+				bottom: 0;
+				text-align: center;
+				line-height: 200px;
+			}
+		</style>		
 	</head>
-	<script src="../js/mui.min.js"></script>
-	<script type="text/javascript">
-		mui.init()
-	</script>
-	<style type="text/css">
-		#map{
-			position: fixed;
-			left: 0;
-			width: 100%;
-			top: 44px;
-			bottom: 44px;
-			text-align: center;
-			line-height: 200px;
-		}
-	</style>
 	<body>
 		<header class="mui-bar mui-bar-nav">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		    <h1 class="mui-title">地图页</h1>
+		    <h1 class="mui-title">监控列表</h1>
 		</header>
 		<div class="mui-content">
-		    <section id="map">
+			<section id="map">
 		    	地图加载中
 		    </section>
 		</div>
 	</body>
-	<script type="text/javascript">
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
 		var Map = null;
 		var em = null;
 		var createMap = function(id){
